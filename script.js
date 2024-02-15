@@ -8,7 +8,7 @@ let modalCars = $(".cards");
 let modalCardWrap = $(".modal--menyu");
 let btn = $(".btn");
 let btn2 = $(".btn2");
-
+let selectorAlfabit = $("#select2");
 
 
 // console.log(cardWrapper);
@@ -19,6 +19,7 @@ let btn2 = $(".btn2");
 //---------------------DINAMIC CARD-----------------
 
 function renderPraduct(data) {
+    cardWrapper.innerHTML="";
     if(data.length>0){
         data.forEach((el) => {
               let card = render("div", "card" ,`
@@ -79,9 +80,6 @@ function modalCard(data) {
 
 modalCard(praducts2)
 
-
-
-
 btn.addEventListener("click" , ()=>{
     modalCardWrap.style.display = 'flex';   
 })
@@ -90,4 +88,52 @@ btn2.addEventListener("click" , ()=>{
     modalCardWrap.style.display = 'none';   
 })
 
+//----------------------------------SORT DATA ALFABIT-------------------
+
+selectorAlfabit.addEventListener("change", (el)=>{
+    let sortAlfabit = el.target.value
+    console.log(sortAlfabit);
+    if(sortAlfabit=="Aa-Zz"){
+        let praductsSortAlfab = praducts.sort((a,b)=>{
+            if(a.name.toLowerCase()<b.name.toLowerCase()){
+                return -1;
+            }
+            return 0;
+        })
+        renderPraduct(praductsSortAlfab);
+    }else if(sortAlfabit=="Zz-Aa"){
+        let praductsSortAlfab = praducts.sort((a,b)=>{
+            if(a.name.toLowerCase()>b.name.toLowerCase()){
+                return -1;
+            }
+            return 0;
+        })
+        renderPraduct(praductsSortAlfab);
+    }
+})
+
+// -------------------------SEARCH DATA---------------------
+
+let searchDataWrap = $(".search-data");
+let searcInput = $("#search-input");
+
+searcInput.addEventListener("input",(e)=>{
+    let searchData = e.target.value;
+    // console.log(searchData);
+    let searchName =praducts.filter((el) => {
+        return el.name.toLocaleLowerCase().includes(searchData.toLocaleLowerCase());
+    });
+
+    if(searchData =="") searchName=[];
+
+    renderData(searchName);
+})
+
+function renderData(data) {
+    searchDataWrap.innerHTML="";
+    data.forEach((el)=>{
+        let tag = render("h2","titil",`${el.name}`);
+        searchDataWrap.appendChild(tag);
+    })
+}
 

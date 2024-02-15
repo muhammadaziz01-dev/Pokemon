@@ -1,3 +1,5 @@
+//-----------------------------------Praducts 1---------------------------------
+
 let praducts = [
     {
         img:"./assets/imgs/pokemon.svg",
@@ -8,55 +10,56 @@ let praducts = [
     },
     {
         img:"./assets/imgs/pokemon.svg",
-        name:"Pokemons",
+        name:"Aokemons",
         nickname: "Grass, Poison",
         kg: "6.9 kg",
         age:"99 age",
     },
     {
         img:"./assets/imgs/pokemon.svg",
-        name:"Pokemons",
+        name:"Sokemons",
         nickname: "Grass, Poison",
         kg: "6.9 kg",
         age:"99 age",
     },
     {
         img:"./assets/imgs/pokemon.svg",
-        name:"Pokemons",
+        name:"Tokemons",
         nickname: "Grass, Poison",
         kg: "6.9 kg",
         age:"99 age",
     },
     {
         img:"./assets/imgs/pokemon.svg",
-        name:"Pokemons",
+        name:"Bokemons",
         nickname: "Grass, Poison",
         kg: "6.9 kg",
         age:"99 age",
     },
     {
         img:"./assets/imgs/pokemon.svg",
-        name:"Pokemons",
+        name:"Wokemons",
         nickname: "Grass, Poison",
         kg: "6.9 kg",
         age:"99 age",
     },
     {
         img:"./assets/imgs/pokemon.svg",
-        name:"Pokemons",
+        name:"Zokemons",
         nickname: "Grass, Poison",
         kg: "6.9 kg",
         age:"99 age",
     },
     {
         img:"./assets/imgs/pokemon.svg",
-        name:"Pokemons",
+        name:"Yokemons",
         nickname: "Grass, Poison",
         kg: "6.9 kg",
         age:"99 age",
     },
 ];
 
+//-----------------------------------Praducts 2---------------------------------
 
 let praducts2 = [
     {

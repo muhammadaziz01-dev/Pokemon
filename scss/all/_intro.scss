@@ -55,6 +55,18 @@
                     right: 28px;
                     top: 18px;
                 }
+
+                .search-data{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: end;
+                    gap: 8px;
+                    position: absolute;
+                    bottom: -30px;
+                    width: 100%;
+                    background: #FFF;
+                }
             }
 
             button{
